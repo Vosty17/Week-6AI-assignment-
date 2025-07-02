@@ -40,6 +40,8 @@ good_conditions = {
 yield_pred = predict_yield(good_conditions)
 print(f"Predicted yield: {yield_pred:.2f} Q/acre")
 ```
+## Development flowchart 
+![AIoT System Flowchart]()
 
 ## Future Work
 

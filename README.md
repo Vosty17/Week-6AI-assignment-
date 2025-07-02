@@ -3,6 +3,7 @@
 
 ## Overview
 This project is a smart crop recommendation system that uses machine learning to suggest the best crop for a farm based on soil and weather sensor data. It supports continuous learning, allowing the model to improve over time with new data and farmer feedback.
+![AIoT Crop Recommendation System](https://github.com/Vosty17/Crop.jpg/blob/main/IMG-20250702-WA0009.jpg)
 
 ## Features
 1. **Initial Model Training:**  

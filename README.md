@@ -1,37 +1,54 @@
-# Week-6AI-assignment-
+
+```
+![IoT Crop Recommendation System log]()
+
 *# IoT Crop Recommendation System with Continuous Learning*
 
 ## Overview
-This project is a smart crop recommendation system that uses machine learning to suggest the best crop for a farm based on soil and weather sensor data. It supports continuous learning, allowing the model to improve over time with new data and farmer feedback.
-![AIoT Crop Recommendation System](https://github.com/Vosty17/Crop.jpg/blob/main/IMG-20250702-WA0009.jpg)
+
+This project predicts crop yield using a combination of batch and online machine learning. It leverages sensor data (rainfall, fertilizer, temperature, N, P, K) to help farmers and agronomists make data-driven decisions for better harvests. The system supports continuous learning, updating itself as new data arrives.
 
 ## Features
-1. **Initial Model Training:**  
-   - Loads and preprocesses the `Crop_recommendation.csv` dataset (N, P, K, temperature, humidity, pH, rainfall, crop label).
-   - Trains a Random Forest model for initial crop prediction.
-   - Saves preprocessing objects and the trained model for reuse.
 
-2. **Continuous Learning:**  
-   - Uses an online learning model (Hoeffding Tree) for real-time updates.
-   - Continuously retrains with new sensor data and farmer feedback.
-   - Stores historical data for periodic full retraining.
+1. Batch training with Gradient Boosting for initial yield prediction.
+2. Online learning using River for real-time model updates.
+3. Visualizes actual vs. predicted yields.
+4. Predicts yield from sensor data via a simple function.
+5. Saves and updates models for continuous improvement.
 
-3. **IoT Device Simulation:**  
-   - Simulates daily sensor readings.
-   - Provides crop recommendations.
-   - Accepts simulated farmer feedback to update the model.
+## Dataset
 
-## How It Works
-- **Data Preprocessing:** Encodes crop labels, scales features, and splits data for training/testing.
-- **Model Training:** Trains a Random Forest classifier and evaluates accuracy.
-- **Continuous Learning:** Initializes an online model with historical data, updates with new inputs, and periodically retrains.
-- **IoT Simulation:** Mimics sensor readings and farmer actions over multiple days.
+- Input: `crop_yield_data.csv` with features like rainfall, fertilizer, temperature, and soil nutrients.
+- Output: Yield in Q/acre.
+- Data is cleaned to remove missing yield values.
 
-## Usage
-1. Place `Crop_recommendation.csv` in your working directory.
-2. Run the main script to train the model and start the simulation.
-3. The system will simulate daily readings, recommend crops, and update itself with feedback.
+## Results
 
-## Requirements
-- Python 3.x
-- pandas, numpy, scikit-learn, joblib, river
+- Evaluates model using R² Score and MAE.
+- Plots actual vs. predicted yields.
+- Online MAE is updated as new data streams in.
+
+## Example Usage
+
+```
+good_conditions = {
+    'Rain Fall (mm)': 1250,
+    'Fertilizer': 80,
+    'Temperatue': 28,
+    'Nitrogen (N)': 80,
+    'Phosphorus (P)': 24,
+    'Potassium (K)': 20
+}
+yield_pred = predict_yield(good_conditions)
+print(f"Predicted yield: {yield_pred:.2f} Q/acre")
+```
+
+## Future Work
+
+- Integrate more IoT sensor types.
+- Add web or mobile interface.
+- Expand to crop recommendation, not just yield.
+
+## License
+
+MIT License.

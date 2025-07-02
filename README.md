@@ -1,5 +1,5 @@
 
-![IoT Crop Recommendation System log(https://github.com/Vosty17/Logo.png/blob/main/IMG-20250702-WA0016.jpg)
+![IoT Crop Recommendation System log](https://github.com/Vosty17/Logo.png/blob/main/IMG-20250702-WA0016.jpg)
 *# IoT Crop Recommendation System with Continuous Learning*
 
 ## Overview

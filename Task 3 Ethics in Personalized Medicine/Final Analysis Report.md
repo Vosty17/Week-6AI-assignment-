@@ -1,0 +1,11 @@
+# Ethics in Personalized Medicine: Final Analysis Summary
+
+This report analyzes bias in AI-driven personalized medicine, focusing on the Cancer Genomic Atlas (TCGA) dataset. The objective was to identify, quantify, and mitigate biases that may arise when artificial intelligence is used to recommend treatments, with emphasis on demographic representation, algorithmic fairness, and clinical implementation.
+
+**Key findings** show notable demographic biases in the TCGA dataset. Ethnic minorities, such as Black/African American and Hispanic/Latino patients, are underrepresented compared to their proportions in the general population. This underrepresentation can result in AI models that are less accurate or potentially unsafe for these groups, perpetuating health disparities. Age and socioeconomic biases were also observed, with certain age groups and lower-income populations being less well-represented.
+
+Algorithmic analysis revealed that feature selection and model performance can vary significantly across demographic groups. Some genomic features showed high selection bias, and model accuracy differed by up to 24% between groups. Prediction probabilities and calibration were less reliable for underrepresented populations, raising concerns about the fairness and trustworthiness of AI recommendations.
+
+To address these issues, the project implemented and evaluated several bias mitigation strategies. Pre-processing methods such as stratified sampling and data augmentation improved representation, while fairness-aware training and post-processing corrections helped reduce disparities in model outcomes. Continuous monitoring, regular audits, and transparent reporting were identified as essential for maintaining fairness over time.
+
+The analysis concludes that while AI offers significant promise for personalized medicine, careful attention must be paid to data diversity, algorithmic fairness, and ethical oversight. It is recommended that healthcare organizations adopt proactive bias detection, ensure diverse data collection, and implement fairness-aware modeling practices. Through these efforts, AI-driven personalized medicine can deliver more equitable and effective care for all patients, helping to reduce disparities and improve health outcomes across diverse populations.
